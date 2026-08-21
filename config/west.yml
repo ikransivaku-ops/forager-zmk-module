@@ -3,9 +3,8 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: ikransivaku-ops
-  url-base: https://github.com/ikransivaku-ops
-    - name: caksoylar                             # <---
-      url-base: https://github.com/caksoylar      # <---
+      url-base: https://github.com/ikransivaku-ops
+
 manifest:
   remotes:
     - name: zmkfirmware
