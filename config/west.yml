@@ -2,20 +2,34 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: carrefinho                            # <---
-      url-base: https://github.com/carrefinho     # <---
+    - name: ikransivaku-ops
+  url-base: https://github.com/ikransivaku-ops
     - name: caksoylar                             # <---
       url-base: https://github.com/caksoylar      # <---
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+
+    - name: ikransivaku-ops
+      url-base: https://github.com/ikransivaku-ops
+
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
+
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: forager-zmk-module                    # <---
-      remote: carrefinho                          # <---
-      revision: main                              # <---
-    - name: zmk-rgbled-widget                     # <---
-      remote: caksoylar                           # <---
-      revision: main                              # <---
+
+    - name: forager-zmk-module
+      remote: ikransivaku-ops
+      revision: main
+
+    - name: zmk-rgbled-widget
+      remote: caksoylar
+      revision: main
+
   self:
     path: config
