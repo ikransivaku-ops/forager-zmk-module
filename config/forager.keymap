@@ -270,6 +270,13 @@
 
             label = "UNICODE_CEDILHA";
         };
+
+        unicode_cedilha_maior: unicode_cedilha_maior {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "UNICODE_CEDILHA_MAIOR";
+        };
     };
 
     keymap {
@@ -278,10 +285,10 @@
         base_layer {
             display-name = "BASE";
             bindings = <
-  &kp Q         &kp W        &kp E            &kp R         &kp T        &kp Y      &kp U              &kp I             &kp O        &kp P
-  &hml LCTRL A  &hml LALT S  &hml LEFT_GUI D  &hml LSHFT F  &kp G        &kp H      &hmr RSHIFT J      &hmr RIGHT_GUI K  &hmr RALT L  &cedilha RCTRL 0
-  &kp Z         &kp X        &kp C            &kp V         &kp B        &kp N      &kp M              &comma_morph      &dot_morph   &kp TILDE
-                                              &lt 3 SPACE   &lt 2 TAB    &lt 1 RET  &double_backspace
+  &kp Q         &kp W        &kp E            &kp R         &kp T           &kp Y      &kp U              &kp I             &kp O        &kp P
+  &hml LCTRL A  &hml LALT S  &hml LEFT_GUI D  &hml LSHFT F  &kp G           &kp H      &hmr RSHIFT J      &hmr RIGHT_GUI K  &hmr RALT L  &cedilha RCTRL 0
+  &kp Z         &kp X        &kp C            &kp V         &kp B           &kp N      &kp M              &comma_morph      &dot_morph   &kp TILDE
+                                              &lt 3 SPACE   &lt 2 DELETE    &lt 1 RET  &double_backspace
             >;
         };
 
@@ -298,20 +305,20 @@
         num_layer {
             display-name = "NUM";
             bindings = <
-  &kp ESCAPE  &kp N7          &kp UP_ARROW    &kp F2           &kp F11        &kp MINUS     &kp N7        &kp N8        &kp N9        &kp SLASH
-  &kp TAB     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp EQUAL      &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK
-  &kp GRAVE   &kp HOME        &kp END         &kp PAGE_DOWN    &kp PAGE_UP    &kp EQUAL     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD
-                                              &kp SPACE        &trans         &kp RET       &kp BSPC
+  &kp ESCAPE  &none           &kp UP_ARROW    &kp F2           &kp F11        &kp MINUS     &kp N7               &kp N8                   &kp N9                   &kp SLASH
+  &kp TAB     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp EQUAL      &kp NUMBER_0  &hmr RIGHT_SHIFT N4  &hmr RIGHT_GUI NUMBER_5  &hmr RIGHT_ALT NUMBER_6  &hmr RCTRL ASTERISK
+  &none       &kp HOME        &kp END         &kp PAGE_DOWN    &kp PAGE_UP    &kp PLUS      &kp NUMBER_1         &kp NUMBER_2             &kp NUMBER_3             &kp COMMA
+                                              &kp SPACE        &trans         &trans        &kp BSPC
             >;
         };
 
         sym_layer {
             display-name = "SYM";
             bindings = <
-  &kp LBRC   &kp AMPS  &kp ASTRK  &kp LPAR   &kp RBRC    &none  &none      &none      &none     &none
-  &kp COLON  &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS    &none  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-  &kp TILDE  &kp EXCL  &kp AT     &kp HASH   &kp PIPE    &none  &none      &none      &none     &none
-                                  &trans     &trans      &none  &none
+  &kp SINGLE_QUOTE  &kp EXCLAMATION  &kp AT     &kp HASH   &kp PERCENT    &none  &none      &none      &none     &none
+  &kp COLON         &kp DLLR         &kp PRCNT  &kp CARET  &kp PLUS       &none  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
+  &kp TILDE         &kp EXCL         &kp AT     &kp HASH   &kp PIPE       &none  &none      &none      &none     &none
+                                                &trans     &trans         &none  &none
             >;
         };
 
