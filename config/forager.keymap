@@ -480,6 +480,20 @@
 
             label = "U_AGUDO_UPPER";
         };
+
+        A_Agudo_lowercase: A_Agudo_lowercase {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp N0 &kp NUMBER_2 &kp NUMBER_2 &kp N5>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "A_AGUDO_LOWERCASE";
+        };
     };
 
     keymap {
@@ -498,10 +512,10 @@
         sym_layer {
             display-name = "SYM";
             bindings = <
-  &kp SINGLE_QUOTE  &kp EXCLAMATION  &E_agudo_lower  &kp HASH   &kp PERCENT    &kp UNDERSCORE    &U_agudo_lower        &I_agudo_lower         &O_agudo_lower   &none
-  &A_agudo_lower    &kp DLLR         &kp PRCNT       &kp CARET  &kp PLUS       &kp PIPE          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON        &kp AMPERSAND
-  &A_crase_lower    &kp AT_SIGN      &none           &none      &none          &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp LEFT_BRACE         &kp RIGHT_BRACE  &kp QUESTION
-                                                     &kp LSHFT  &trans         &trans            &none
+  &kp SINGLE_QUOTE    &kp EXCLAMATION  &E_agudo_lower  &kp HASH   &kp PERCENT    &kp UNDERSCORE    &U_agudo_lower        &I_agudo_lower         &O_agudo_lower   &none
+  &A_Agudo_lowercase  &kp DLLR         &kp PRCNT       &kp CARET  &kp PLUS       &kp PIPE          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON        &kp AMPERSAND
+  &A_crase_lower      &kp AT_SIGN      &none           &none      &none          &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp LEFT_BRACE         &kp RIGHT_BRACE  &kp QUESTION
+                                                       &kp LSHFT  &trans         &trans            &none
             >;
         };
 
@@ -537,7 +551,7 @@
         layer_5 {
             bindings = <
   &kp Q  &kp W  &kp E  &kp R                  &kp T       &kp Y        &kp U  &kp I      &kp O    &kp P
-  &kp A  &kp S  &kp D  &kp F                  &kp G       &kp H        &kp J  &kp K      &kp L    &kp SEMI
+  &kp A  &kp S  &kp D  &kp F                  &kp G       &kp H        &kp J  &kp K      &kp L    &none
   &kp Z  &kp X  &kp C  &kp V                  &kp B       &kp N        &kp M  &kp COMMA  &kp DOT  &kp TILDE
                        &hml LEFT_SHIFT SPACE  &lt 2 N0    &lt 1 ENTER  &to 0
             >;
