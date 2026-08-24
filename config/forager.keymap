@@ -552,20 +552,6 @@
             label = "A_TIO_UPPER";
         };
 
-        O_tio_upper: O_tio_upper {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp KP_N0 &kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_3>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "O_TIO_UPPER";
-        };
-
         A_tio_upper: A_tio_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -578,6 +564,20 @@
                 <&kp LEFT_ALT>;
 
             label = "A_TIO_UPPER";
+        };
+
+        O_tio_upper: O_tio_upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_5>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "O_TIO_UPPER";
         };
     };
 
