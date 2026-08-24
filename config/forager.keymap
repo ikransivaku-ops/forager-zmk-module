@@ -550,7 +550,7 @@
             label = "A_TIO_LOWER";
         };
 
-        O_tio_lower: a_tio_upper {
+        O_tio_lower: o_tio_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -561,7 +561,7 @@
                 <&macro_release>,
                 <&kp LEFT_ALT>;
 
-            label = "A_TIO_UPPER";
+            label = "O_TIO_LOWER";
         };
 
         A_tio_upper: A_tio_upper {
